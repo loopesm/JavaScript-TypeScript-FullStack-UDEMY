@@ -1,0 +1,7 @@
+TAGS USADAS NO EJS
+
+<% Controle de Fluxo ( if, for ...) %>
+<%= Imprime na Tela Escapando caracteres %>
+<%- Imprime na Tela Sem Escapar caracteres %>
+<%# Comentarios %>
+<%- include('CAMINHO/ARQUIVO'); %>

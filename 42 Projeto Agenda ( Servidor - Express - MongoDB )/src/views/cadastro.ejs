@@ -1,0 +1,78 @@
+<%- include('includes/head'); %> 
+<%- include('includes/navBar'); %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2"></div>
+
+    <div class="col-lg-8 my-2">
+      <h1 class="text-center">Cadastro de Contatos</h1>
+      <p class="text-center lead"><%= user.name %>, preencha as informações abaixo para gerência os dados do seu contato.</p>
+
+      <%- include('includes/messagesContatos') %>
+
+      <div>
+        <% if (contato._id) { %>
+          <form action="/contato/edit/<%= contato._id %>" method="POST">
+        <% } else { %>
+          <form action="/contato/register" method="POST">
+        <% } %>
+          <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+          <input type="hidden" name="userId" value="<%= user._id %>">
+          <div class="form-group mb-3">
+            <label for="contatoName" class="form-label">Nome do Contato:</label>
+            <input
+              value="<%= contato.contatoName %>"
+              type="text"
+              class="form-control border border-primary"
+              name="contatoName"
+              id="contatoName"
+            />
+          </div>
+          <div class="form-group mb-3">
+            <label for="contatoLastName" class="form-label">Sobrenome do Contato:</label>
+            <input
+              value="<%= contato.contatoLastName %>"
+              type="text"
+              class="form-control border border-primary"
+              name="contatoLastName"
+              id="contatoLastName"
+            />
+          </div>
+          <div class="form-group mb-3">
+            <label for="phoneContato" class="form-label">Telefone:</label>
+            <input
+              value="<%= contato.phoneContato %>"
+              type="tel"
+              class="form-control border border-primary"
+              name="phoneContato"
+              id="phoneContato"
+              placeholder="(99) 9 9999-9999"
+            />
+          </div>
+          <div class="form-group mb-3">
+            <label for="emailContato" class="form-label">E-mail:</label>
+            <input
+              value="<%= contato.emailContato %>"
+              type="email"
+              class="form-control border border-primary"
+              name="emailContato"
+              id="emailContato"
+            />
+          </div>
+
+      </div>
+      
+        <button type="submit" class="btn btn-primary">Salvar</button>
+        <a href="/"><button type="button" class="btn btn-primary">Voltar</button></a>
+        
+      </form>
+
+
+    </div>
+
+    <div class="col-lg-2"></div>
+  </div>
+</div>
+
+<%- include('includes/footer'); %>

@@ -1,0 +1,48 @@
+<%- include('includes/head'); %> <%- include('includes/navBar'); %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2"></div>
+
+    <div class="col-lg-8 my-2">
+      <h1 class="text-center">Olá <%= user.name %></h1>
+      <p class="text-center lead">Veja a lista de todos os seus contatos</p>
+
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover table-sm">
+          <tr class="text-center">
+            <th class="sticky-col">Nome</th>
+            <th>Sobrenome</th>
+            <th>Telefone</th>
+            <th>E-mail</th>
+            <th></th>
+            <th></th>
+          </tr>
+          <% if (contatos) { %>
+          <% contatos.forEach( contato => { %>
+            <tr class="text-center">
+              <td class="sticky-col"><%= contato.contatoName %></td>
+              <td><%= contato.contatoLastName %></td>
+              <td><%= contato.phoneContato %></td>
+              <td><%= contato.emailContato %></td>
+              <td><a href="/contato/index/<%= contato._id %>">Editar</td>
+              <td><a class="text-danger" href="/contato/delete/<%= contato._id %>">Excluir</td>
+            </tr>
+          <% }) %>
+          <% } else { %>
+            <p class="text-center lead"> Cadastre seus contatos para poder vizualizá-los</p>
+          <% } %>
+      </div>
+
+
+
+
+
+
+    </div>
+
+    <div class="col-lg-2"></div>
+  </div>
+</div>
+
+<%- include('includes/footer'); %>

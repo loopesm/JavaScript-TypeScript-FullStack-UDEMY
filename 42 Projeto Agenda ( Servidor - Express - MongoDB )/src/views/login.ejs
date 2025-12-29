@@ -1,0 +1,101 @@
+<%- include('includes/head'); %> <%- include('includes/navBar'); %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2"></div>
+
+    <div class="col-lg-8 my-2">
+      <h1 class="text-center">Faça Login ou Cadastre-se</h1>
+      <p class="text-center lead">Chega de perder seus contatos!</p>
+
+      
+
+      <div class="row">
+
+        <div class="col-lg border border-primary rounded p-4 m-1">
+          <h4 class="text-center mb-3">Acesse sua conta:</h4>
+          <form action="/login/login" method="POST">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <div class="mb-3">
+              <label for="email-login" class="form-label">E-mail:</label>
+              <input
+                type="email"
+                class="form-control border border-primary"
+                name="email"
+                id="email-login"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="password-login" class="form-label">Senha:</label>
+              <input
+                type="password"
+                class="form-control border border-primary"
+                name="password"
+                id="password-login"
+              />
+            </div>
+
+            <%- include('includes/messagesLogin') %>
+
+            <button type="submit" class="btn btn-primary">Entrar</button>
+          </form>
+        </div>
+
+        <div class="col-lg border border-primary rounded p-4 m-1">
+          <h4 class="text-center mb-3">Faça seu Cadastro aqui:</h4>
+
+          <form action="/login/register" method="POST">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <div class="form-group mb-3">
+              <label for="name" class="form-label">Seu Nome:</label>
+              <input
+                type="text"
+                class="form-control border border-primary"
+                name="name"
+                id="name"
+              />
+            </div>
+            <div class="form-group mb-3">
+              <label for="email-register" class="form-label">Seu melhor E-mail:</label>
+              <input
+                type="email"
+                class="form-control border border-primary"
+                name="email"
+                id="email-register"
+              />
+            </div>
+            <div class="form-group mb-3">
+              <label for="password-register" class="form-label">Senha:</label>
+              <input
+                type="password"
+                class="form-control border border-primary"
+                name="password"
+                id="password-register"
+              />
+            </div>
+
+            <%- include('includes/messagesRegister') %>
+
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+          </form>
+
+        </div>
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <div class="col-lg-2"></div>
+  </div>
+</div>
+
+<%- include('includes/footer'); %>

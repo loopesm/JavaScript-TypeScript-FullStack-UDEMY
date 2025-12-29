@@ -1,0 +1,99 @@
+/* FONTES */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&family=Roboto:ital,wght@0,100;1,400&display=swap');
+
+/* VARIAVEIS */
+:root{
+    --cor1: #7dffe3;
+    --cor2: #22a589;
+}
+
+/* GLOBAL */
+
+*{
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body{
+    background: var(--cor1) ;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    margin: 15px auto;
+    background: #fff;
+    padding: 1px 10px 10px 10px;
+    height: 95vh;
+    border-radius: 50px;
+}
+
+form input, form label, form button{
+   display: block;
+   width: 80%; 
+   margin: 0 auto;
+}
+
+form label{
+    font-weight: 700;
+    text-align: left;
+}
+
+form input{
+    font-size: 24px;
+    height: 34px;
+    padding: 0 20px;
+}
+
+form input:focus{
+    outline: 3px solid var(--cor1);
+}
+
+form div button:hover{
+    background: var(--cor2);
+}
+
+form button:active{
+    outline: 3px solid red;
+}
+
+form button{
+    margin: 25px auto;
+    border: none;
+    background-color: var(--cor1);
+    color: #000;
+    font-size: 24px;
+    font-weight: 700;
+    height: 34px;
+    width: 25%;
+    cursor: pointer;
+}
+
+.caixaBotao{
+    display: flex;
+}
+
+
+.botao{
+    display: inline-block;
+}
+
+.meuContador{
+    padding: 10px;;
+    display: inline-block;
+    border: 5px solid #000;
+    color: #000;
+}
+
+.red{
+    padding: 10px;;
+    display: inline-block;
+    border: 5px solid #FF0000;
+    color: #FF0000;
+}

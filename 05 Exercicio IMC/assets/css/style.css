@@ -1,0 +1,117 @@
+/* FONTES */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&family=Roboto:ital,wght@0,100;1,400&display=swap');
+
+/* VARIAVEIS */
+:root{
+    --cor1: #7dffe3;
+    --cor2: #22a589;
+}
+
+/* GLOBAL */
+
+*{
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body{
+    background: var(--cor1) ;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+.container {
+    max-width: 75%;
+    margin: 15px auto;
+    background: #fff;
+    padding: 1px 10px 10px 10px;
+    height: auto;
+    border-radius: 50px;
+}
+
+.resultado{
+    margin: 0;
+    padding: 0;;
+
+}
+
+.p-resultado{
+    display: inline-block;
+    width: 75%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+form input, form label, form button{
+   display: block;
+   width: 80%; 
+   margin: 0 auto;
+}
+
+form label{
+    font-weight: 700;
+    text-align: left;
+}
+
+form input{
+    font-size: 24px;
+    height: 34px;
+    padding: 0 20px;
+}
+
+form input:focus{
+    outline: 3px solid var(--cor1);
+}
+
+form button:hover{
+    background: var(--cor2);
+}
+
+form button:active{
+    outline: 2px solid red;
+}
+
+form button{
+    margin: 15px auto;
+    margin-bottom: 15px;
+    border: none;
+    background-color: var(--cor1);
+    color: #000;
+    font-size: 24px;
+    font-weight: 700;
+    height: 34px;
+    width: 50%;
+    cursor: pointer;
+}
+
+table{
+    border-collapse: collapse;
+    font-size: 12px;
+    font-weight: 700;
+    width: 80%;
+    margin: 15px auto 20px;
+    border: 1px solid #000;
+}
+
+table tr th{
+    line-height: 25px;
+    background: #d8fdf1;
+}
+
+table tr td{
+    border-top: 1px solid #000;
+    line-height: 15px;
+}
+
+.paragrafoVermelho{
+    background: var(--cor1);
+}
+
+.paragrafoVerde{
+    background: #ff8080;   
+}

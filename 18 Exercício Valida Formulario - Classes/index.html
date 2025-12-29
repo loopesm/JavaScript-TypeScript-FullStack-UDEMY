@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valida Formulário</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+    <section class="container">
+
+        <h1>Exercício</h1>
+
+        <p>Validação de Formulário</p>
+
+        <form action="/" method="post" class="meuForm">
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" class="nome validar">
+
+            <label for="sobrenome">Sobrenome:</label>
+            <input type="text" id="sobrenome" class="sobrenome validar">
+
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" class="cpf validar">
+
+            <label for="cpf">Usuario:</label>
+            <input type="text" id="usuario" class="usuario validar">
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" class="senha validar">
+
+            <label for="repetirSenha">Confirmar Senha:</label>
+            <input type="password" id="repetirSenha" class="repetirSenha validar">
+
+            <button type="submit">Enviar</button>
+
+        </form>
+
+
+    </section>
+    
+
+
+    <script src="./assets/js/validaCPF.js"></script>
+    <script src="./assets/js/index.js"></script>
+</body>
+</html>

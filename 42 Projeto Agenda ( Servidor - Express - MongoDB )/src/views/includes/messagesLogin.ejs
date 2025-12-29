@@ -1,0 +1,31 @@
+  <% if (errorsLogin.length > 0) { %>
+
+    <div class="row">
+        <div class="col my-2">
+          <div class="alert alert-danger text-center">
+    
+            <% errorsLogin.forEach( erro => { %>
+                <%= erro %> <br>
+            <% }); %>
+    
+          </div>
+        </div>
+      </div>
+    
+      <% } %>
+
+  <% if (successLogin.length > 0) { %>
+
+    <div class="row">
+        <div class="col my-2">
+          <div class="alert alert-success text-center">
+    
+            <% successLogin.forEach( success => { %>
+                <%= success %> <br>
+            <% }); %>
+    
+          </div>
+        </div>
+      </div>
+    
+      <% } %>

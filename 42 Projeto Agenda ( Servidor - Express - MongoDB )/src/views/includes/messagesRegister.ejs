@@ -1,0 +1,31 @@
+<% if (errorsRegister.length > 0) { %>
+
+<div class="row">
+    <div class="col my-2">
+      <div class="alert alert-danger text-center">
+
+        <% errorsRegister.forEach( erro => { %>
+            <%= erro %> <br>
+        <% }); %>
+
+      </div>
+    </div>
+  </div>
+
+  <% } %>
+
+  <% if (successRegister.length > 0) { %>
+
+    <div class="row">
+        <div class="col my-2">
+          <div class="alert alert-success text-center">
+    
+            <% successRegister.forEach( success => { %>
+                <%= success %> <br>
+            <% }); %>
+    
+          </div>
+        </div>
+      </div>
+    
+      <% } %>
