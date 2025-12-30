@@ -8,7 +8,7 @@ module.exports = [
   {
     languageOptions: {
       ecmaVersion: 'latest',
-      sourceType: 'commonjs',
+      sourceType: 'modules',
       globals: {
         ...globals.node,
         ...globals.jest, // Caso vá fazer testes depois
@@ -23,6 +23,7 @@ module.exports = [
       'no-console': 'off',
       'consistent-return': 'error',
       'no-undef': 'error',
+      'class-methods-use-this': 'off',
     },
   },
   prettierConfig,

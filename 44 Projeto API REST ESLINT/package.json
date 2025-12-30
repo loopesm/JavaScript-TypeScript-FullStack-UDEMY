@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "db:migrate": "npx sequelize db:migrate --options-path .sequelizerc.cjs",
+    "db:create": "npx sequelize migration:create --options-path .sequelizerc.cjs --name"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +21,13 @@
     "globals": "^16.5.0",
     "nodemon": "^3.1.11",
     "prettier": "^3.7.4",
+    "sequelize-cli": "^6.6.3",
     "sucrase": "^3.35.1"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "mariadb": "^3.4.5",
+    "sequelize": "^6.37.7"
   }
 }
