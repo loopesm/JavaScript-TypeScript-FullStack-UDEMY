@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js",
+    "dev": "nodemon src/server.js",
     "db:migrate": "npx sequelize db:migrate --options-path .sequelizerc.cjs",
     "db:create": "npx sequelize migration:create --options-path .sequelizerc.cjs --name"
   },
@@ -18,7 +18,7 @@
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
-    "globals": "^16.5.0",
+    "globals": "^17.0.0",
     "nodemon": "^3.1.11",
     "prettier": "^3.7.4",
     "sequelize-cli": "^6.6.3",
